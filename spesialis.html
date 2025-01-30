@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesialis Gurah Mesin Mobil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Spesialis Gurah Mesin Mobil</h1>
+        <p>Pengalaman dan Terpercaya, Aman Dijamin</p>
+    </header>
+
+    <section class="content">
+        <h2>Manfaat Gurah Mesin Mobil</h2>
+        <p>Membersihkan kotoran karbon di ruang bakar, meningkatkan tenaga, dan menghemat BBM.</p>
+        
+        <h2>Proses Gurah Mesin</h2>
+        <p>Gunakan cairan carbon cleaner berbasis air untuk membersihkan ruang bakar mobil Anda.</p>
+        
+        <h2>Kapan Waktu Gurah Mesin Terbaik?</h2>
+        <p>Setelah 2x ganti oli atau 10.000 KM agar mesin tetap optimal.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Alamat Kami</h2>
+        <p>Jl. Anggrek No.7, Blotan, Wedomartani, Ngemplak, Sleman, Yogyakarta</p>
+        <p>Telepon / WhatsApp: <a href="https://wa.me/6288220211486">0882-2021-1486</a></p>
+    </section>
+
+    <section class="form-section">
+        <h2>Formulir Pemesanan</h2>
+        <form id="orderForm">
+            <label for="brand">Nama Merek Mobil:</label>
+            <input type="text" id="brand" name="brand" required>
+
+            <label for="location">Alamat Lokasi:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="schedule">Jadwal Layanan:</label>
+            <input type="date" id="schedule" name="schedule" required>
+
+            <button type="button" onclick="submitOrder()">Pesan Sekarang</button>
+        </form>
+    </section>
+
+    <script>
+        function submitOrder() {
+            const brand = document.getElementById("brand").value;
+            const location = document.getElementById("location").value;
+            const schedule = document.getElementById("schedule").value;
+
+            const message = `Halo, saya ingin memesan layanan gurah mesin.\n\nNama Merek Mobil: ${brand}\nAlamat Lokasi: ${location}\nJadwal Layanan: ${schedule}`;
+            const whatsappUrl = `https://wa.me/6288220211486?text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>
+
+</body>
+</html>
