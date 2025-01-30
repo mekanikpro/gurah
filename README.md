@@ -1,0 +1,2 @@
+# gurah
+mesin aman
